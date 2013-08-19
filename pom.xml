@@ -8,9 +8,18 @@
 	<name>7kmServer</name>
 	<description />
 	<properties>
+		<!-- Generic properties -->
+		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring-framework.version>3.2.4.RELEASE</spring-framework.version>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- spring -->
+		<spring-framework.version>3.2.3.RELEASE</spring-framework.version>
+		<!-- hibernate -->
 		<hibernate-version>4.2.4.Final</hibernate-version>
+		<!-- AOP -->
+		<aspectj.version>1.7.3</aspectj.version>
+		<!-- json handle -->
+		<jackson.version>1.9.13</jackson.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,6 +47,24 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate-version}</version>
 		</dependency>
+		<!-- aspectj -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectj.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectj.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- jackson -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
@@ -58,13 +85,14 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<showWarnings>true</showWarnings>
 				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.3</version>
 				<configuration>
 					<version>3.0</version>
 					<failOnMissingWebXml>false</failOnMissingWebXml>

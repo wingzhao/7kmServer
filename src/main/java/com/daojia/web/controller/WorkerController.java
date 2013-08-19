@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 服务人员Controller
@@ -26,9 +27,10 @@ public class WorkerController extends BaseController {
 	 * @return
 	 */
 	@RequestMapping(value="/test")
+	@ResponseBody
 	public Map<String, Object> test() {
 		Map<String, Object> relMap = new HashMap<>();
-		relMap.put("relsult", true);
+		relMap.put("relsult", false);
 		return relMap;
 	}
 
