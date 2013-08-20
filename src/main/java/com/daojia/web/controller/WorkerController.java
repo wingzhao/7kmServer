@@ -33,5 +33,19 @@ public class WorkerController extends BaseController {
 		relMap.put("relsult", false);
 		return relMap;
 	}
+	
+	/**
+	 * 获取服务人员信息
+	 *
+	 * @author zhaolei
+	 * 2013年8月20日 下午5:41:40
+	 *
+	 * @return
+	 */
+	public Map<String,Object> get(){
+		return null;
+	}
+	
+	
 
 }
