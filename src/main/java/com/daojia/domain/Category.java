@@ -6,8 +6,12 @@ package com.daojia.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.annotations.DynamicInsert;
@@ -30,26 +34,33 @@ public class Category implements Serializable {
 	/**
 	 * 品类id
 	 */
+	@Id
+	@Column(name = "id", columnDefinition = "integer")
 	private Integer catId;
 
 	/**
 	 * 父品类id
 	 */
+	@Column(name = "parent_id", columnDefinition = "integer")
 	private Integer parentId;
 
 	/**
 	 * 品类名称
 	 */
+	@Column(name = "cat_name", columnDefinition = "varchar", length = 20)
 	private String catName;
 
 	/**
 	 * 品类状态
 	 */
+	@Column(name = "is_enable", columnDefinition = "tinyint", length = 1)
 	private Integer isEnable;
-	
+
 	/**
 	 * 最后修改时间
 	 */
+	@Column(name = "last_time", columnDefinition = "datetime")
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date lastTime;
 
 	/**
@@ -110,6 +121,21 @@ public class Category implements Serializable {
 	 */
 	public void setIsEnable(Integer isEnable) {
 		this.isEnable = isEnable;
+	}
+
+	/**
+	 * @return the lastTime
+	 */
+	public Date getLastTime() {
+		return lastTime;
+	}
+
+	/**
+	 * @param lastTime
+	 *            the lastTime to set
+	 */
+	public void setLastTime(Date lastTime) {
+		this.lastTime = lastTime;
 	}
 
 }
