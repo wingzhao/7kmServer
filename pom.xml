@@ -1,17 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>daojiaServer</groupId>
+	<groupId>com.daojia7km.server</groupId>
 	<artifactId>daojiaServer</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<name>daojiaServer</name>
-	<description />
-	<properties>
+	<description>7km server program, include api,site,maas,util,service, dao</description>
+	<modules>
+		<module>daojiaUtil</module>
+		<module>daojiaCommon</module>
+		<module>daojiaService</module>
+		<module>daojiaDao</module>
+		<module>daojiaWeb</module>
+		<module>daojiaApi</module>
+		<module>daojiaMaas</module>
+		<module>daojiaSite</module>
+	</modules>
+	 <properties>
 		<!-- Generic properties -->
 		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- <project.version>1.0.0-SNAPSHOT</project.version> -->
 		<!-- spring -->
 		<spring-framework.version>3.2.3.RELEASE</spring-framework.version>
 		<!-- hibernate -->
@@ -23,7 +34,7 @@
 		<!-- c3p0 -->
 		<c3p0.version>0.9.1.2</c3p0.version>
 	</properties>
-	<dependencies>
+	<!--<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -49,7 +60,7 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate-version}</version>
 		</dependency>
-		<!-- aspectj -->
+		aspectj
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -61,7 +72,7 @@
 			<version>${aspectj.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- jackson -->
+		jackson
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
@@ -106,5 +117,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
 </project>

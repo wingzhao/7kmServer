@@ -43,3 +43,9 @@ mtct_new.iml
 *.iml
 .pydevproject
 .DS_Store
+/src
+*.prefs
+*.project
+*.classpath
+*.jsdtscope
+*/.settings/*.*

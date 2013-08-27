@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>  
+        <artifactId>daojiaServer</artifactId>  
+        <groupId>com.daojia7km.server</groupId>  
+        <version>1.0.0-SNAPSHOT</version>  
+    </parent> 
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>daojiaCommon</artifactId>
+	<groupId>com.daojia7km.server</groupId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>daojiaCommon</name>
+	<description>7km Common</description>
+	<dependencies>
+		<!-- jackson -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+	</dependencies>
+</project>
