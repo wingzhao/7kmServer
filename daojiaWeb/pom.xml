@@ -11,4 +11,12 @@
 	<packaging>jar</packaging>
 	<name>daojia web</name>
 	<description>7km web common</description>
+	<dependencies>
+		<!-- spring mvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+	</dependencies>
 </project>
