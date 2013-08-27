@@ -7,8 +7,8 @@
     </parent> 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>daojiaService</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<!-- <version>1.0.0-SNAPSHOT</version> -->
 	<packaging>jar</packaging>
-	<name>daojiaService</name>
+	<name>daojia service</name>
 	<description>7km service</description>
 </project>
