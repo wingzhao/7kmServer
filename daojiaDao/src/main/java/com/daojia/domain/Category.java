@@ -35,13 +35,13 @@ public class Category implements Serializable {
 	 * 品类id
 	 */
 	@Id
-	@Column(name = "id", columnDefinition = "integer")
+	@Column(name = "id", columnDefinition = "integer", length = 11)
 	private Integer catId;
 
 	/**
 	 * 父品类id
 	 */
-	@Column(name = "parent_id", columnDefinition = "integer")
+	@Column(name = "parent_id", columnDefinition = "integer", length = 11)
 	private Integer parentId;
 
 	/**

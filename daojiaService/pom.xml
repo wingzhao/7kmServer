@@ -6,9 +6,34 @@
         <version>1.0.0-SNAPSHOT</version>  
     </parent> 
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.daojia7km.service</groupId> 
 	<artifactId>daojiaService</artifactId>
 	<!-- <version>1.0.0-SNAPSHOT</version> -->
 	<packaging>jar</packaging>
 	<name>daojia service</name>
 	<description>7km service</description>
+	<dependencies>
+		<!-- 7km 内部依赖 -->
+		<dependency>
+			<groupId>com.daojia7km.dao</groupId>
+			<artifactId>daojiaDao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+	</dependencies>
 </project>

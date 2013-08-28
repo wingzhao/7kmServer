@@ -13,17 +13,17 @@
 	<description>7km manage and analyse system</description>
 	<dependencies>
 		<dependency>
-			<groupId>com.daojia7km.server</groupId>
+			<groupId>com.daojia7km.common</groupId>
 			<artifactId>daojiaCommon</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.daojia7km.server</groupId>
+			<groupId>com.daojia7km.web</groupId>
 			<artifactId>daojiaWeb</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.daojia7km.server</groupId>
+			<groupId>com.daojia7km.service</groupId>
 			<artifactId>daojiaService</artifactId>
 			<version>${project.version}</version>
 		</dependency>
